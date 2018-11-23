@@ -54,5 +54,16 @@ MRCtrl.getMRSFilters = async (req, res) => {
     });
 }
 
+MRCtrl.listStates = async (req, res) => {
+    const user = await MRModel.findAll(function(err, content) 
+    {
+        if(err){
+            console.log(err);
+        } else {
+            res.json(content);
+        }
+    });
+}
+
 module.exports = MRCtrl;
 

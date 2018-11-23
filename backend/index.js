@@ -30,6 +30,9 @@ app.use(function(req, res, next) {
 app.use('/api/users', require('./routes/users.routes'));
 app.use('/api/patients', require('./routes/patients.routes'));
 app.use('/api/medical_records', require('./routes/medical_records.routes'));
+app.use('/api/states', require('./routes/states.routes'));
+app.use('/api/categorizations', require('./routes/categorization.routes'));
+
 
 app.listen(app.get('port'), () => {
     console.log('Server funcionando en puerto ' + app.get('port'));
